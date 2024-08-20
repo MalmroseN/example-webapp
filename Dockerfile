@@ -1,5 +1,5 @@
-FROM java:8-alpine
-MAINTAINER Your Name <you@example.com>
+FROM openjdk:8-jdk-alpine
+LABEL maintainer="Nathaniel Malmrose nathanielmalmrose@gmail.com"
 
 ADD target/uberjar/example-webapp.jar /example-webapp/app.jar
 
