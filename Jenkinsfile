@@ -6,12 +6,12 @@ def GIT_COMMIT_HASH
 pipeline {
     agent any
     stages {
-        stage('Check lein') {
-            steps {
-                sh 'lein version'
-            }
-        }
-        
+        // stage('Check lein') {
+        //     steps {
+        //         sh 'lein version'
+        //     }
+        // }
+
         stage('Checkout Source Code and Logging Into Registry') {
             steps {
                 echo "Logging Into the Private ECR Registry"
