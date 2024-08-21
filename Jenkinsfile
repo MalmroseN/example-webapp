@@ -7,13 +7,11 @@ pipeline {
     agent any
     stages {
         stage('Check lein') {
-            tools {
-                lein 'Leiningen'
-            }
             steps {
                 sh 'lein version'
             }
         }
+        
         stage('Checkout Source Code and Logging Into Registry') {
             steps {
                 echo "Logging Into the Private ECR Registry"
