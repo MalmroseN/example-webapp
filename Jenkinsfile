@@ -7,6 +7,9 @@ pipeline {
     agent any
     stages {
         stage('Check lein') {
+            tools {
+                lein 'Leiningen'
+            }
             steps {
                 sh 'lein version'
             }
